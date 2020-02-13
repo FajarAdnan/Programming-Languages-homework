@@ -2,6 +2,7 @@ use std::io;
 
 // Main function that calls the calculating functions
 fn main() {
+    let plus_one = |x: i32| x + 1;
     // Get user input for a
     let mut data_01 = String::new(); // make a mutable string variable
     println!("Enter a.");
