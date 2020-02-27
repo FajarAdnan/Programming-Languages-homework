@@ -15,8 +15,20 @@ fn evaluate(array: Vec<Primitive>) -> i32{
         total + evaluate(vec![*next]))},
         Primitive::Multiply => {iter.fold(1, |total, next|
         total * evaluate(vec![*next]))},
-        Primitive::Subtract => {iter.fold(vec![*next], |total, next|
-        total - vec![*next])},
+        // My Solution (incorrect one)
+        //Primitive::Subtract => {iter.fold(vec![*next], |total, next|
+        //total - vec![*next])},
+        // Russell's solution (correct method)
+        Primitive::Subtract => {
+            let start = iter.next();
+            if let Some(Primitive::Number(val)) = start {
+                iter.fold(*val, |total, next|
+                    total - evaluate(vec![*next]))
+            }
+            else {
+                0
+            }
+        }
         Primitive::Number(val) => *val
     }
 }
