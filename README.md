@@ -5,6 +5,7 @@ Each assignment is contained within a folder labeled with the assignment number.
 
 # HW14-15 Notes
 This is the final homework assignment for Programming Languages
+Not all assignments were done by code, so they're not all here but these are the ones that were done by code
 
 # To run:
 1. Please go to the folder "cd /Users/username/Downloads/Programming-Languages-homework-master/hw14-15/interpreter" (or where the download was saved to)
